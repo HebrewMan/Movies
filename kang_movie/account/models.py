@@ -26,11 +26,6 @@ class Profile(models.Model):
     email = models.CharField(max_length=40, blank=True, null=True, verbose_name='用户邮箱', db_index=True)
     avatar = models.CharField(max_length=60, blank=True, null=True, verbose_name='用户头像')
 
-    # 会员相关
-    is_upgrade = models.IntegerField(default=0, verbose_name='是否升级会员')
-    upgrade_time = models.DateTimeField(blank=True, null=True, verbose_name='升级日期')
-    expire_time = models.DateTimeField(blank=True, null=True, verbose_name='过期时间')
-    upgrade_count = models.IntegerField(default=0, verbose_name='升级次数')
     # 关联用户表
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     # 新增

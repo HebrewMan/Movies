@@ -25,7 +25,6 @@ class CustomUserCreateSerializer(UserCreateSerializer):
 
     def create(self, validated_data):
         user = UserCreateSerializer.create(self, validated_data)
-        # 写入到profile表
         profile = Profile(user=user)
         profile.save()
         return user
