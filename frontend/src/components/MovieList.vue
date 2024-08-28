@@ -31,7 +31,6 @@
         </div>  
     </div>
   </div>
-    <!-- 添加Page组件，并将info数据作为props传递给Page组件 -->
     <Page :info="info"></Page>
 
 </template>
@@ -89,7 +88,6 @@ export default {
     },
   },
   watch: {
-    // 监听路由的变化
     $route() {
       this.get_movie_data();
     },

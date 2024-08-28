@@ -17,7 +17,6 @@
         </svg>
       </button>
     </span>
-    <!-- 遍历每一页 -->
 
     <a v-for="page in pages" :key="page" class="page-link">
       <button v-if="page === '...'" class="w-8 h-8 rounded mx-1 my-1 bg-gray-300">

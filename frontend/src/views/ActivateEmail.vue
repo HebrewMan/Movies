@@ -30,7 +30,6 @@ export default {
     components: { Header, Footer},
     methods: {
         activate() {
-            // 获取参数
             const uid = this.$route.params.uid 
             const token = this.$route.params.token
             const formData = {
@@ -46,7 +45,6 @@ export default {
                   this.$router.push({name: 'Login'});
               })
               .catch( function(error) {
-                // 遍历所有错误信息
                 console.log(error)
                 const errorData = error.response.data
                 console.log(errorData)
